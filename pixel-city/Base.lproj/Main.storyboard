@@ -22,7 +22,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxZ-dp-oH0">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lxZ-dp-oH0">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cat-D4-NiG">
@@ -91,6 +91,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-594" y="169"/>
+        </scene>
+        <!--PopVC-->
+        <scene sceneID="bay-XN-Iwm">
+            <objects>
+                <viewController storyboardIdentifier="PopVC" id="7Vt-c1-4J9" customClass="PopVC" customModule="pixel_city" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xvJ-VL-VJa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="a0q-FG-SIh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="waM-iM-LoL">
+                                <rect key="frame" x="87.5" y="622" width="200" height="25"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Double-tap to dismiss" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jhl-ph-wb4">
+                                        <rect key="frame" x="14" y="1" width="172.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="4hx-1N-aTJ"/>
+                                    <constraint firstItem="jhl-ph-wb4" firstAttribute="centerY" secondItem="waM-iM-LoL" secondAttribute="centerY" id="spX-gY-jEd"/>
+                                    <constraint firstItem="jhl-ph-wb4" firstAttribute="centerX" secondItem="waM-iM-LoL" secondAttribute="centerX" id="vrn-LE-Kx0"/>
+                                    <constraint firstAttribute="width" constant="200" id="zje-6u-AUe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zc5-hG-4mD" firstAttribute="bottom" secondItem="waM-iM-LoL" secondAttribute="bottom" constant="20" id="8QC-BI-oj2"/>
+                            <constraint firstItem="a0q-FG-SIh" firstAttribute="leading" secondItem="zc5-hG-4mD" secondAttribute="leading" id="WFE-aM-frT"/>
+                            <constraint firstItem="a0q-FG-SIh" firstAttribute="trailing" secondItem="zc5-hG-4mD" secondAttribute="trailing" id="dJv-Ij-QEp"/>
+                            <constraint firstItem="waM-iM-LoL" firstAttribute="centerX" secondItem="xvJ-VL-VJa" secondAttribute="centerX" id="dat-D4-Jb8"/>
+                            <constraint firstItem="a0q-FG-SIh" firstAttribute="bottom" secondItem="zc5-hG-4mD" secondAttribute="bottom" id="jEA-sX-xiL"/>
+                            <constraint firstItem="a0q-FG-SIh" firstAttribute="top" secondItem="xvJ-VL-VJa" secondAttribute="top" id="tyI-5p-3TX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zc5-hG-4mD"/>
+                    </view>
+                    <connections>
+                        <outlet property="popImageView" destination="a0q-FG-SIh" id="8ln-Qe-ic1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A2D-OG-G6Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="200.80000000000001" y="168.6656671664168"/>
         </scene>
     </scenes>
     <resources>
